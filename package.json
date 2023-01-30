@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "eslint": "^8.14.0"
+  },
+  "dependencies": {
+    "@wordpress/eslint-plugin": "^12.2.0",
+    "yorkie": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --max-warnings=0 ./assets/js/pledg_payments.js"
+  },
+  "gitHooks": {
+    "pre-push": "yarn run lint"
+  }
+}

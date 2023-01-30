@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "parser": "babel-eslint"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "eqeqeq": "warn",
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
+    "multiline-ternary": ["warn", "always-multiline"],
+    "space-before-blocks": ["warn", "always"],
+    "semi-spacing": ["warn", {"before": false, "after": true}]
+  }
+}

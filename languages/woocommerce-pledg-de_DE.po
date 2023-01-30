@@ -1,0 +1,245 @@
+# Copyright (C) 2021 Pledg
+# This file is distributed under the same license as the Woocommerce Pledg plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Pledg 2.2.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-"
+"pledg\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-02-16T09:02:57+00:00\n"
+"PO-Revision-Date: 2021-02-19 14:12+0100\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Domain: woocommerce-pledg\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+
+#. Description of the plugin
+#: includes/classes/WC_Pledg_Gateway.php:38
+msgid "Instalment payment, simple and accessible."
+msgstr "Ratenzahlung, einfach und zugänglich."
+
+#: includes/classes/WC_Pledg_Gateway.php:120
+msgid "Title lang"
+msgstr "Titel lang"
+
+#: includes/classes/WC_Pledg_Gateway.php:128
+msgid "Description lang"
+msgstr "Beschreibung lang"
+
+#: includes/classes/WC_Pledg_Gateway.php:139
+msgid "Title"
+msgstr "Titel"
+
+#: includes/classes/WC_Pledg_Gateway.php:148
+msgid "Description"
+msgstr "Beschreibung"
+
+#: includes/classes/WC_Pledg_Gateway.php:159
+msgid "Activate/Deactivate"
+msgstr "Aktivieren / Deaktivieren"
+
+#: includes/classes/WC_Pledg_Gateway.php:160
+msgid "Activate %s"
+msgstr "%s aktivieren"
+
+#: includes/classes/WC_Pledg_Gateway.php:166
+msgid "Sandbox mode/Production Mode"
+msgstr "Sandbox-Modus / Produktionsmodus"
+
+#: includes/classes/WC_Pledg_Gateway.php:167
+msgid "Production Mode"
+msgstr "Produktionsmodus"
+
+#: includes/classes/WC_Pledg_Gateway.php:173
+msgid "Merchant ID"
+msgstr "Merchant ID"
+
+#: includes/classes/WC_Pledg_Gateway.php:178
+msgid "Secret Key"
+msgstr "Geheimer Schlüssel"
+
+#: includes/classes/WC_Pledg_Gateway.php:186
+msgid "Order minimum amount"
+msgstr "Mindestmenge bestellen"
+
+#: includes/classes/WC_Pledg_Gateway.php:189
+msgid "Minimum transaction amount, zero does not define a minimum"
+msgstr "Der minimale Transaktionsbetrag Null definiert kein Minimum"
+
+#: includes/classes/WC_Pledg_Gateway.php:193
+msgid "Order maximum amount"
+msgstr "Bestellmenge bestellen"
+
+#: includes/classes/WC_Pledg_Gateway.php:196
+msgid "Maximum transaction amount, zero does not define a maximum"
+msgstr "Maximaler Transaktionsbetrag, Null definiert kein Maximum"
+
+#: includes/classes/WC_Pledg_Gateway.php:200
+msgid "Logo"
+msgstr "Logo"
+
+#: includes/classes/WC_Pledg_Gateway.php:203
+msgid ""
+"Logo to show next to payment method. Click on the input box to add an image "
+"or keep blank for default image."
+msgstr ""
+"Logo neben der Zahlungsmethode. Klicken Sie auf das Eingabefeld, um ein "
+"Bild hinzuzufügen, oder lassen Sie das Standardbild leer."
+
+#. translators: Has the currency sign to be before or after the amount to pay (€1 or 1€), after by default.
+#: includes/classes/WC_Pledg_Gateway.php:376
+msgid "Currency symbol (\"before\" or \"after\")"
+msgstr "after"
+
+#: includes/classes/WC_Pledg_Gateway.php:377
+msgid "Deadline"
+msgstr "Fällig"
+
+#: includes/classes/WC_Pledg_Gateway.php:378
+msgid "the"
+msgstr "am"
+
+#. translators: %s: Will be replaced by the amount of fees (including currency symbol).
+#: includes/classes/WC_Pledg_Gateway.php:380
+msgid "(including %s of fees)"
+msgstr "(einschließlich %s der Gebühren)"
+
+#. translators: %s1: amount payed (inc. currency symbol), %s2: date of payment.
+#: includes/classes/WC_Pledg_Gateway.php:382
+msgid "I'll pay %s1 on %s2."
+msgstr "Ich werde %s1 am %s2 bezahlen."
+
+#: includes/classes/WC_Pledg_REST_Controller.php:98
+msgid "%s has notified this order as paid."
+msgstr "%s hat diese Bestellung als bezahlt gemeldet."
+
+#: includes/classes/WC_Pledg_REST_Controller.php:139
+msgid "Webhook called but getId didn't match any order : "
+msgstr "Webhook called but getId didn't match any order : "
+
+#: includes/classes/WC_Pledg_REST_Controller.php:150
+msgid "Webhook called in the case of a signed transfer."
+msgstr "Webhook called in the case of a signed transfer."
+
+#: includes/classes/WC_Pledg_REST_Controller.php:153
+msgid "Webhook called but there was no reference : "
+msgstr "Webhook called but there was no reference : "
+
+#: includes/classes/WC_Pledg_REST_Controller.php:162
+#: includes/classes/WC_Pledg_REST_Controller.php:250
+msgid ""
+"Webhook called but the reference didn't match the getId (wrong webhook "
+"called with this payload) : "
+msgstr ""
+"Webhook called but the reference didn't match the getId (wrong webhook "
+"called with this payload) : "
+
+#: includes/classes/WC_Pledg_REST_Controller.php:169
+msgid "Webhook called in the case of a signed back mode."
+msgstr "Webhook called in the case of a signed back mode."
+
+#: includes/classes/WC_Pledg_REST_Controller.php:177
+#: includes/classes/WC_Pledg_REST_Controller.php:255
+msgid "Webhook called but amount_cents didn't match to order total : "
+msgstr "Webhook called but amount_cents didn't match to order total : "
+
+#: includes/classes/WC_Pledg_REST_Controller.php:182
+msgid "Webhook called in the case of a unsigned transfer."
+msgstr "Webhook called in the case of a unsigned transfer."
+
+#: includes/classes/WC_Pledg_REST_Controller.php:246
+msgid "Signature could not be decoded of the order "
+msgstr "Signature could not be decoded of the order "
+
+#: woocommerce-pledg.php:110
+msgid "Set logo"
+msgstr "Logo setzen"
+
+#: woocommerce-pledg.php:111
+msgid "Select logo for %s payment"
+msgstr "Wählen Sie das Logo für die %s-Zahlung"
+
+#: woocommerce-pledg.php:147
+msgid "Unknown error : "
+msgstr "Unknown error : "
+
+# Widget admin parameters
+msgid "%s parameters"
+msgstr "%s Parameter"
+
+msgid "Widget parameters"
+msgstr "Widget-Parameter"
+
+msgid "You can set the widget option here"
+msgstr "Hier können Sie die Widget-Option einstellen"
+
+msgid "Enable product widget"
+msgstr "Widget auf Produktseite aktivieren"
+
+msgid "Enable cart widget"
+msgstr "Widget im Warenkorb aktivieren"
+
+msgid "Enable pre-selection of %s payment method if the widget has been clicked"
+msgstr "Vorauswahl der Zahlungsmöglichkeit aktivieren (Vorauswahl der Pledg Zahlungsmöglichkeit aktivieren, wenn das Widget vom Kunden geklickt wurde)"
+
+# Widget frontend
+msgid "Pay in installments (%s installments)%s "
+msgstr "Kostenlos in Raten zahlen (%s Raten)%s "
+
+msgid "Pay later (in %s days)%s "
+msgstr "Später zahlen (in %s Tagen)%s "
+
+msgid ", free of charge"
+msgstr ", kostenlos"
+
+msgid "Buy now."
+msgstr "Jetzt kaufen."
+
+msgid "Pay in installments with Pledg"
+msgstr "Zahlen Sie in Raten*."
+
+msgid "Pay in installments with Django"
+msgstr "Zahlen Sie in Raten mit Django*."
+
+msgid "Free of charge."
+msgstr "Kostenlos."
+
+msgid "Validate your basket"
+msgstr "Bestätigen Sie Ihren Warenkorb"
+
+msgid "Select the payment in installment"
+msgstr "Wählen Sie die Ratenzahlung aus"
+
+msgid "Fill in your card number"
+msgstr "Geben Sie Ihre Kartennummer ein"
+
+msgid "The first share is debited today. The following shares will be automatically debited in the following months"
+msgstr "Die erste Rate wird heute abgebucht. Die folgenden Anteile werden automatisch in den folgenden Monaten abgebucht"
+
+msgid "See the"
+msgstr "Siehe"
+
+msgid "*Loan subject to conditions. Pledg"
+msgstr "*Die Gewährung unterliegt Bedingungen."
+
+msgid "*Loan subject to conditions. Django"
+msgstr "*Die Gewährung unterliegt Bedingungen. Kreditgeber: La Banque Postale Consumer Finance, Vertriebspartner: Django."
+
+msgid "Fees may apply."
+msgstr "Gebühren können anfallen"
+
+msgid "Pay later with Pledg"
+msgstr "Später zahlen*."
+
+msgid "Pay later with Django"
+msgstr "Später zahlen mit Django*."
+
+msgid "Select the deferred payment"
+msgstr "Wählen Sie \"Später zahlen\" aus"
+
+msgid "The payment will be debited later, depending on the deadline you have chosen"
+msgstr "Die Zahlung wird je nach gewählter Frist später abgebucht"

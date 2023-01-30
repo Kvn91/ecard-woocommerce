@@ -121,6 +121,8 @@ class WC_Pledg_Gateway extends WC_Payment_Gateway
             }
             $metadata['products'] = $md_products;
 
+            $metadata['payment'] = $this->get_payment_type_metadata();
+
             $pledgSettings = get_option('pledg_plugin_options');
             $metadata['widget'] = [
                 'productWidgetEnabled' => !!$pledgSettings['product_widget'],
@@ -154,6 +156,40 @@ class WC_Pledg_Gateway extends WC_Payment_Gateway
             wc_get_logger()->error('pledg_create_metadata - exception : ' . $exp->getMessage(), ['source' => 'pledg_woocommerce']);
         }
         return $metadata;
+    }
+
+    private function get_payment_type_metadata()
+    {
+        $logger = wc_get_logger();
+
+        $merchantUri = $this->getPledgMerchantUri();
+        $response = json_decode(wp_remote_retrieve_body(wp_remote_get($merchantUri)));
+
+        if (!$response) {
+            $logger->error('Pledg error while trying to get merchant ' . $this->getMerchantId());
+        } elseif (is_wp_error($response)) {
+            $logger->error('Pledg error while trying to get merchant ' . $this->getMerchantId()
+                .' : ' . $response->get_error_message());
+        } elseif (\property_exists($response, 'error')) {
+            $logger->error('Pledg error while trying to get merchant ' . $this->getMerchantId()
+                . ' : ' . $response->error->debug);
+        } else {
+            if (\property_exists($response, 'payment_type')
+                    && strtolower($response->payment_type) === WC_Pledg_Constants::PLEDG_PAYMENT_TYPES['deferred']
+                ) {
+                    return [
+                        'type' => $response->payment_type,
+                        'delay_in_days' => $response->delay_in_days,
+                    ];
+            } elseif  (\property_exists($response, 'payment_type')
+                && strtolower($response->payment_type) === WC_Pledg_Constants::PLEDG_PAYMENT_TYPES['installment']
+            ) {
+                return [
+                    'type' => $response->payment_type,
+                    'installments_nb' => $response->installments_nb,
+                ];
+            }
+        }
     }
 
     /**
